@@ -29,3 +29,7 @@ DATABASES = {
 }
 ```
 
+## create admin User
+* python manage.py createsuperuser
+
+

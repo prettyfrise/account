@@ -1,0 +1,211 @@
+{% load staticfiles %}
+<div class="content-wrapper">
+    <div class="row purchace-popup">
+        <div class="col-12">
+              <span class="d-flex alifn-items-center">
+                <p>[INFO] 월 334,194 원을 더 저축할 수 있습니다.</p>
+              </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+            <div class="card card-statistics">
+                <div class="card-body">
+                    <div class="clearfix">
+                        <div class="float-left">
+                            <i class="mdi mdi-cube text-danger icon-lg"></i>
+                        </div>
+                        <div class="float-right">
+                            <p class="mb-0 text-right">현재 총 자산</p>
+                            <div class="fluid-container">
+                                <h3 class="font-weight-medium text-right mb-0">3,650,650</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted mt-3 mb-0">
+                        <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+            <div class="card card-statistics">
+                <div class="card-body">
+                    <div class="clearfix">
+                        <div class="float-left">
+                            <i class="mdi mdi-receipt text-warning icon-lg"></i>
+                        </div>
+                        <div class="float-right">
+                            <p class="mb-0 text-right">남은 대출금</p>
+                            <div class="fluid-container">
+                                <h3 class="font-weight-medium text-right mb-0">100,232,345</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted mt-3 mb-0">
+                        <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Product-wise sales
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+            <div class="card card-statistics">
+                <div class="card-body">
+                    <div class="clearfix">
+                        <div class="float-left">
+                            <i class="mdi mdi-poll-box text-success icon-lg"></i>
+                        </div>
+                        <div class="float-right">
+                            <p class="mb-0 text-right">주택기금</p>
+                            <div class="fluid-container">
+                                <h3 class="font-weight-medium text-right mb-0">30,044,099</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted mt-3 mb-0">
+                        <i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> Weekly Sales
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+            <div class="card card-statistics">
+                <div class="card-body">
+                    <div class="clearfix">
+                        <div class="float-left">
+                            <i class="mdi mdi-account-location text-info icon-lg"></i>
+                        </div>
+                        <div class="float-right">
+                            <p class="mb-0 text-right">시댁적금</p>
+                            <div class="fluid-container">
+                                <h3 class="font-weight-medium text-right mb-0">2,039,232</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted mt-3 mb-0">
+                        <i class="mdi mdi-reload mr-1" aria-hidden="true"></i> Product-wise sales
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">2018년 월 별 수익&지출 차트</h4>
+                    <canvas id="barChart" style="height:100px"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">목표달성</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Progress
+                                </th>
+                                <th>
+                                    Amount
+                                </th>
+                                <th>
+                                    Sales
+                                </th>
+                                <th>
+                                    Deadline
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="font-weight-medium">
+                                    1
+                                </td>
+                                <td>
+                                    1억 모으기
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success progress-bar-striped" role="progressbar"
+                                             style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    $ 77.99
+                                </td>
+                                <td class="text-danger"> 53.64%
+                                    <i class="mdi mdi-arrow-down"></i>
+                                </td>
+                                <td>
+                                    May 15, 2015
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-medium">
+                                    2
+                                </td>
+                                <td>
+                                    대출 갚기
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger progress-bar-striped" role="progressbar"
+                                             style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    $245.30
+                                </td>
+                                <td class="text-success"> 24.56%
+                                    <i class="mdi mdi-arrow-up"></i>
+                                </td>
+                                <td>
+                                    July 1, 2015
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-medium">
+                                    3
+                                </td>
+                                <td>
+                                    이달의 생활비 지출 목표
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning progress-bar-striped" role="progressbar"
+                                             style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    $138.00
+                                </td>
+                                <td class="text-danger"> 28.76%
+                                    <i class="mdi mdi-arrow-down"></i>
+                                </td>
+                                <td>
+                                    Apr 12, 2015
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content-wrapper ends -->

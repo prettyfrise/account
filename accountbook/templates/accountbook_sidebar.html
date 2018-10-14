@@ -58,11 +58,19 @@
                 <span class="menu-title">예산관리</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="menu-icon mdi mdi-minus-box-outline"></i>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
+                <i class="menu-icon mdi mdi-calendar-range"></i>
                 <span class="menu-title">대출관리</span>
+                <i class="menu-arrow"></i>
             </a>
+            <div class="collapse" id="ui-basic1">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'loan:loan_main' %}">대출조회</a>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
 </nav>

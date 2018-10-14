@@ -1,0 +1,119 @@
+{% extends 'accountbook_index.html' %}
+{% load staticfiles %}
+{% block body_content %}
+
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">가계부 리스트</h4>
+                        <form class="form-sample">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">비용 유형</label>
+                                        <div class="col-sm-3">
+                                            <div class="form-radio">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="membershipRadios"
+                                                           id="membershipRadios1" value="" checked=""> All
+                                                    <i class="input-helper"></i></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-radio">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="membershipRadios"
+                                                           id="membershipRadios1" value=""> 수입
+                                                    <i class="input-helper"></i></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-radio">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="membershipRadios"
+                                                           id="membershipRadios2" value="option2"> 지출
+                                                    <i class="input-helper"></i></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">날짜</label>
+                                        <div class="col-sm-3">
+                                            <input class="form-control" placeholder="dd/mm/yyyy">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            ~
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input class="form-control" placeholder="dd/mm/yyyy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">사용 분류</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control">
+                                                <option>급여</option>
+                                                <option>인센</option>
+                                                <option>기타</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">사용 상세</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">비용</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" placeholder="1,000,000">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">정산 방식</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control">
+                                                <option>자동이체</option>
+                                                <option>현금</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">비고</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" placeholder="할인/적립 기타 등등">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock body_content %}

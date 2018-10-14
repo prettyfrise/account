@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='home'),
-    url(r'^expense/',include('expense.urls', namespace='expense')),
+    #url(r'^reviews/', include(('reviews.urls', 'reviews'), namespace='reviews')),
+    url(r'^expense/',include(('expense.urls', 'expense'), namespace='expense')),
 ]

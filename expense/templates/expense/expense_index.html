@@ -122,6 +122,23 @@
                         </tr>
                       </thead>
                       <tbody>
+                        {% for data in p %}
+                        <tr>
+                            <td>{{ data.usedate }}</td>
+                            <td>
+                            {% if data.category == 'plus' %}수입{% else %}지출{% endif %}
+                            </td>
+                            <td>{{ data.field }}</td>
+                            <td>{{ data.subscribe }}</td>
+                            {% if data.category == 'plus' %}
+                            <td class="text-success"> {{ data.price }} ₩</td>
+                            {% else %}
+                            <td class="text-danger"> {{ data.price }} ₩</td>
+                            {% endif %}
+                            <td>{{ data.payment_logic }}</td>
+                            <td>{{ data.etc }}</td>
+                        </tr>
+                        {% endfor %}
                         <tr>
                           <td>2018-10-10</td>
                           <td>지출</td>
@@ -231,5 +248,4 @@
 <script src="{% static 'js/dashboard.js' %}"></script>
 <script src="{% static 'js/chart.js' %}"></script>
 <!-- End custom js for this page-->
-
 {% endblock body_content %}

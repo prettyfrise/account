@@ -4,7 +4,8 @@ from django.utils import timezone
 
 def expense_home(request):
     p = MobelTable.objects.all()
-
+    for dot in p:
+        dot.price = format(dot.price, ',')
     template = 'expense/expense_index.html'
     return render(request, template, {'p':p})
 

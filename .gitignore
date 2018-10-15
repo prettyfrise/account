@@ -1,9 +1,9 @@
 # : comments
 
 # Pycharm directory & files
-.account.iml
-.idea
+account.iml
+idea
 venv
 
 # Django migrations history
-migrationsK
+migrations

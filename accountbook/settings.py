@@ -89,10 +89,10 @@ ENVIRONMENT = 'DEV'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'account_dev',
+        'NAME': 'accountbook',
         'USER': 'jblee',
         'PASSWORD': 'Ehfkeh23..',
-        'HOST': '133.186.159.183',
+        'HOST': '133.186.240.67',
         'PORT': '13306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",

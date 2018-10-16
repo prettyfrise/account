@@ -34,11 +34,13 @@
                             </div>
                         </div>
                         <div class="row">
+                            <link rel="stylesheet" href="{% static 'css/style.css' %}">
                             <div class="col-md-6">
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">날짜</label>
+                                    <!--<div class="jquery-calander">-->
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="dd/mm/yyyy" name="usedate"
+                                        <input type="text" class="date-picker" autocomplete="off" placeholder="dd/mm/yyyy" name="usedate"
                                                value="">
                                     </div>
                                 </div>
@@ -71,7 +73,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">비용</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="1,000,000" name="price">
+                                        <input type="text" class="form-control" autocomplete="off" placeholder="1,000,000" name="price">
                                     </div>
                                 </div>
                             </div>
@@ -147,5 +149,6 @@
 <script src="{% static 'js/dashboard.js' %}"></script>
 <script src="{% static 'js/chart.js' %}"></script>
 <!-- End custom js for this page-->
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/calendar.js' %}"></script>
 {% endblock body_content %}

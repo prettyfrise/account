@@ -1,0 +1,141 @@
+{% extends 'accountbook_index.html' %}
+{% load staticfiles %}
+{% block body_content %}
+
+    <style>
+    .table th, .table td {
+    padding: 15px 10px;
+    vertical-align: middle;
+    border-top: 1px solid #f2f2f2;
+    }
+    </style>
+
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">계좌 관리</h4>
+                        <div class="col-md-12 text-right">
+                            <button type="button" class="btn btn-success mr-2" name="add_row">추가</button>
+                            <button type="submit" class="btn btn-success mr-2">저장</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover text-center">
+                                <thead>
+                                <tr name="top_row">
+                                    <th>#</th>
+                                    <th>은행</th>
+                                    <th>사용분류</th>
+                                    <th>명의</th>
+                                    <th>계죄번호</th>
+                                    <th>상세</th>
+                                    <th>잔고</th>
+                                    <th>만기일</th>
+                                    <th>삭제</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>우리은행</td>
+                                    <td>
+                                        <label class="badge badge-success">정기적금</label>
+                                    </td>
+                                    <td>JB</td>
+                                    <td>1245-xxxx-xxxx-xxxx</td>
+                                    <td>12개월 3.5% 단리</td>
+                                    <td class="text-success"> 200,100 ₩</td>
+                                    <td>2019-10-10</td>
+                                    <td class="text-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>국민은행</td>
+                                    <td>
+                                        <label class="badge badge-info">입출금 통장</label>
+                                    </td>
+                                    <td>JB</td>
+                                    <td>1245-xxxx-xxxx-xxxx</td>
+                                    <td>JB 월급 통장</td>
+                                    <td class="text-success"> 100,100 ₩</td>
+                                    <td>-</td>
+                                    <td class="text-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>신한은행</td>
+                                    <td>
+                                        <label class="badge badge-info">입출금 통장</label>
+                                    </td>
+                                    <td>SW</td>
+                                    <td>1245-xxxx-xxxx-xxxx</td>
+                                    <td>SW 급여 통장</td>
+                                    <td class="text-success"> 1,200,100 ₩</td>
+                                    <td>-</td>
+                                    <td class="text-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- plugins:js -->
+    <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+    <script src="{% static 'vendors/js/vendor.bundle.addons.js' %}"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="{% static 'js/off-canvas.js' %}"></script>
+    <script src="{% static 'js/misc.js' %}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="{% static 'js/dashboard.js' %}"></script>
+    <script src="{% static 'js/chart.js' %}"></script>
+    <!-- End custom js for this page-->
+
+    <script>
+    $(document).on("click","button[name=add_row]",function(){
+        var addStaffText = '<tr name="top_row">' +
+                                '<td>+</td>' +
+                                '<td><select class="form-control">' +
+                                    '<option>우리은행</option>' +
+                                    '<option>신한은행</option>' +
+                                    '<option>국민은행</option>' +
+                                    '<option>기업은행</option>' +
+                                '</select></td>' +
+                                '<td><select class="form-control">' +
+                                    '<option>정기적금</option>' +
+                                    '<option>보통예금</option>' +
+                                '</select></td>' +
+                                '<td><select class="form-control">' +
+                                    '<option>SW</option>' +
+                                    '<option>JB</option>' +
+                                '</select></td>' +
+                                '<td><input type="text" class="form-control" name="" size="7"></td>' +
+                                '<td><input type="text" class="form-control" name="" size="7"></td>' +
+                                '<td><input type="text" class="form-control" name="" size="7"></td>' +
+                                '<td><input type="text" class="form-control" name="" size="7"></td>' +
+                                '<td class="text-danger"><i class="fa fa-trash"></i></td>' +
+                            '</tr>';
+
+        var trHtml = $( "tr[name=top_row]:last" );
+        trHtml.after(addStaffText);
+    });
+
+    /*삭제 버튼
+    $(document).on("click","button[name=delStaff]",function(){
+        var trHtml = $(this).parent().parent();
+        trHtml.remove(); //tr 테그 삭제
+    });*/
+    </script>
+{% endblock body_content %}

@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^$', views.index, name='home'),
     #url(r'^reviews/', include(('reviews.urls', 'reviews'), namespace='reviews')),
     url(r'^expense/',include(('expense.urls', 'expense'), namespace='expense')),
-    url(r'^loan/',include(('loan.urls', 'loan'), namespace='loan'))
+    url(r'^loan/',include(('loan.urls', 'loan'), namespace='loan')),
+    url(r'^bank/',include(('bank.urls', 'bank'), namespace='bank'))
 ]

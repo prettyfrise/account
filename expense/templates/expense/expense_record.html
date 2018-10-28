@@ -2,6 +2,13 @@
 {% load staticfiles %}
 {% block body_content %}
 
+    <from action="/your-name/" method="POST">
+        {% csrf_token %}
+        {{ form }}
+{#        <label for="your_name">Your Name: </label>#}
+{#        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">#}
+        <input type="submit" value="OK">
+    </from>
 <div class="content-wrapper">
     <div class="row">
         <div class="col-12 grid-margin">
@@ -40,6 +47,7 @@
                                     <label class="col-sm-3 col-form-label">날짜</label>
                                     <!--<div class="jquery-calander">-->
                                     <div class="col-sm-9">
+                                        {{ form.usedate }}
                                         <input type="text" class="date-picker" autocomplete="off" placeholder="dd/mm/yyyy" name="usedate"
                                                value="">
                                     </div>
@@ -63,6 +71,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">사용 상세</label>
                                     <div class="col-sm-9">
+                                        {{ form.subscribe }}
                                         <input type="text" class="form-control" name="Subscribe">
                                     </div>
                                 </div>

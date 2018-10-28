@@ -2,8 +2,8 @@
 
 # Pycharm directory & files
 account.iml
-idea
+.idea
 venv
-
+misc.xml
 # Django migrations history
 migrations

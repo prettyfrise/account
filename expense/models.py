@@ -2,7 +2,7 @@ from django.db import models
 
 # 날짜, 대분류, 소분류, 상세, 금액, 지불방식, 비고
 # Create your models here.
-class MobelTable(models.Model):
+class Expense_list(models.Model):
     usedate = models.DateField('date published')
     category = models.CharField(max_length=30)
     field = models.CharField(max_length=30)

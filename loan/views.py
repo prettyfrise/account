@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from expense.models import MobelTable
+from expense.models import Expense_list
 from django.utils import timezone
 
 

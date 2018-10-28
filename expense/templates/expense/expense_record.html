@@ -4,10 +4,10 @@
 
     <from action="/your-name/" method="POST">
         {% csrf_token %}
-        {{ form }}
+{#        {{ form }}#}
 {#        <label for="your_name">Your Name: </label>#}
 {#        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">#}
-        <input type="submit" value="OK">
+{#        <input type="submit" value="OK">#}
     </from>
 <div class="content-wrapper">
     <div class="row">
@@ -45,11 +45,10 @@
                             <div class="col-md-6">
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">날짜</label>
-                                    <!--<div class="jquery-calander">-->
                                     <div class="col-sm-9">
                                         {{ form.usedate }}
-                                        <input type="text" class="date-picker" autocomplete="off" placeholder="dd/mm/yyyy" name="usedate"
-                                               value="">
+{#                                        <input type="text" class="date-picker" autocomplete="off" placeholder="dd/mm/yyyy" name="usedate"#}
+{#                                               value="">#}
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +71,7 @@
                                     <label class="col-sm-3 col-form-label">사용 상세</label>
                                     <div class="col-sm-9">
                                         {{ form.subscribe }}
-                                        <input type="text" class="form-control" name="Subscribe">
+{#                                        <input type="text" class="form-control" name="Subscribe">#}
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +81,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">비용</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" autocomplete="off" placeholder="1,000,000" name="price">
+                                        {{ form.price }}
                                     </div>
                                 </div>
                             </div>

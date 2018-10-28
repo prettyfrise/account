@@ -13,6 +13,7 @@ def expense_home(request):
 
 def expense_input(request):
     form = ExpenseForms()
+    '''
     if request.POST:
         category = request.POST['category']
         usedate = request.POST['usedate']
@@ -31,15 +32,9 @@ def expense_input(request):
         price =''
         payment_logic =''
         etc =''
+    '''
     template = 'expense/expense_record.html'
-    return render(request, template, {'category': category,
-                                      'usedate': usedate,
-                                      'field': field,
-                                      'Subscribe': Subscribe,
-                                      'price': price,
-                                      'payment_logic': payment_logic,
-                                      'etc': etc,
-                                      'form': form})
+    return render(request, template, {'form': form})
 
 #
 #

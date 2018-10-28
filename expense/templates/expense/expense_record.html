@@ -2,13 +2,6 @@
 {% load staticfiles %}
 {% block body_content %}
 
-    <from action="/your-name/" method="POST">
-        {% csrf_token %}
-{#        {{ form }}#}
-{#        <label for="your_name">Your Name: </label>#}
-{#        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">#}
-{#        <input type="submit" value="OK">#}
-    </from>
 <div class="content-wrapper">
     <div class="row">
         <div class="col-12 grid-margin">
@@ -26,7 +19,8 @@
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="category"
                                                        id="membershipRadios1" value="plus"> 수입
-                                                <i class="input-helper"></i></label>
+                                                <i class="input-helper"></i>
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
@@ -34,7 +28,8 @@
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="category"
                                                        id="membershipRadios2" value="minus" checked=""> 지출
-                                                <i class="input-helper"></i></label>
+                                                <i class="input-helper"></i>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -58,11 +53,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">사용 분류</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control" name="field">
-                                            <option value="Salary">급여</option>
-                                            <option value="Incentive">인센</option>
-                                            <option value="Bonus">기타</option>
-                                        </select>
+                                        {{ form.field }}
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +62,6 @@
                                     <label class="col-sm-3 col-form-label">사용 상세</label>
                                     <div class="col-sm-9">
                                         {{ form.subscribe }}
-{#                                        <input type="text" class="form-control" name="Subscribe">#}
                                     </div>
                                 </div>
                             </div>

@@ -40,11 +40,10 @@
                             <div class="col-md-6">
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">날짜</label>
-                                    <!--<div class="jquery-calander">-->
                                     <div class="col-sm-9">
                                         {{ form.usedate }}
-                                        <input type="text" class="date-picker" autocomplete="off" placeholder="dd/mm/yyyy" name="usedate"
-                                               value="">
+{#                                        <input type="text" class="date-picker" autocomplete="off" placeholder="dd/mm/yyyy" name="usedate"#}
+{#                                               value="">#}
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +71,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">비용</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" autocomplete="off" placeholder="1,000,000" name="price">
+                                        {{ form.price }}
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +89,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">비고</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="할인/적립 기타 등등" name ='etc'>
+                                        {{ form.etc }}
                                     </div>
                                 </div>
                             </div>
